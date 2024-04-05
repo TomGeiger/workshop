@@ -1,0 +1,52 @@
+
+
+
+/* Custom CSS for Hero Section */
+.hero-section {
+    padding: 50px 0; /* Adjust padding as needed */
+}
+
+.hero-box {
+    background-color: #f8f9fa; /* Background color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 30px; /* Padding inside the box */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Box shadow */
+}
+
+.hero-box h1 {
+    color: #333; /* Heading color */
+}
+
+.hero-box p {
+    color: #555; /* Paragraph color */
+}
+
+.hero-box h2 {
+    color: #28a745; /* Secondary heading color */
+}
+
+.hero-box .card {
+    margin-top: 20px; /* Spacing between cards */
+    border: none; /* Remove card border */
+    border-radius: 10px; /* Rounded corners for cards */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for cards */
+}
+
+.hero-box .card-title {
+    color: #fff; /* Card title color */
+    background-color: #6c757d; /* Card title background color */
+    padding: 15px; /* Padding for card title */
+    border-top-left-radius: 10px; /* Rounded corners for top-left */
+    border-top-right-radius: 10px; /* Rounded corners for top-right */
+}
+
+.hero-box .card-text {
+    color: #333; /* Card text color */
+    padding: 15px; /* Padding for card text */
+}
+
+@media (max-width: 768px) {
+    .hero-box .card {
+        margin-top: 30px; /* Adjust spacing for smaller screens */
+    }
+}
