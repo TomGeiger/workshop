@@ -38,10 +38,8 @@ export class QuizService {
     
     // Save updated questions back to localStorage
     localStorage.setItem(this.localStorageKey, JSON.stringify(storedQuestions));
-    console.log('storedQuestions', storedQuestions)
   }
     
-
   clearLocalStorage(): void {
     // Clear the localStorage item
     localStorage.removeItem(this.localStorageKey);

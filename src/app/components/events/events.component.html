@@ -1,0 +1,36 @@
+<div class="container">
+
+  <div class="btn-group mb-1" role="group">
+    <input type="radio" class="btn-check" name="btnEvents" id="btnEvents1" autocomplete="off" (click)="selectEvents('all')" checked>
+    <label class="btn btn-outline-primary" for="btnEvents1">All Events</label>
+
+    <input type="radio" class="btn-check" name="btnEvents" id="btnEvents2" autocomplete="off" (click)="selectEvents('my')">
+    <label class="btn btn-outline-primary" for="btnEvents2">My Events</label>
+  </div>
+
+  <div *ngIf="events$ | async as events">
+    <div class="row">
+
+      <div class="col-md-4 mb-4" *ngFor="let event of events">
+        <div class="card">
+          <img [src]="event.image" class="card-img-top" alt="Event Image">
+          <div class="card-body">
+            <h3 class="card-title">{{ event.title }}</h3>
+            <p class="card-text">{{ event.description }}</p>
+            <div class="event-details">
+              <p class="card-text"><strong>Date:</strong> {{ event.date | date }}</p>
+              <p class="card-text"><strong>Time:</strong> {{ event.time }}</p>
+              <p class="card-text"><strong>Meeting Starts:</strong> {{ event.date.toString() | timeRemaining: event.time }}</p>
+              <p class="card-text"><strong>Location:</strong> {{ event.location }}</p>
+              <p class="card-text"><strong>Instructor:</strong> {{ event.instructor }}</p>
+            </div>
+            <button type="button" (click)="setCurrentEvent(event)" class="btn btn-primary mt-3" data-bs-toggle="modal"
+              data-bs-target="#eventDetailModal">
+              View Details
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

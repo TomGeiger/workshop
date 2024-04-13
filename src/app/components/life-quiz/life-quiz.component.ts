@@ -1,5 +1,3 @@
-
-
 import { Component, OnInit } from '@angular/core';
 import { QuizService } from './quiz.service';
 
@@ -20,6 +18,7 @@ export class LifeQuizComponent implements OnInit {
   ngOnInit(): void {
     // this.getQuestions();
     this.loadQuestions();
+    this.showResults();
   }
 
   setCurrentQuestion(question: any): void {
@@ -35,7 +34,6 @@ export class LifeQuizComponent implements OnInit {
     // sort them by category
     const sortedQuestions = answeredQuestions.sort((a, b) => a.category.localeCompare(b.category));
     this.answeredQuestions = sortedQuestions;
-    console.log(sortedQuestions);
   }
 
   printAnswers(): void {
@@ -85,7 +83,6 @@ export class LifeQuizComponent implements OnInit {
       });
   }
   
-
   copyAnswersxx(): void {
     const answersText = this.answeredQuestions.map(question => `${question.question}\n\n${question.subquestions[0]}\nAnswer: ${question.answer}`).join('\n\n');
     navigator.clipboard.writeText(answersText)
@@ -108,7 +105,6 @@ export class LifeQuizComponent implements OnInit {
         // Merge questions from JSON file and local storage
         this.questions = this.mergeQuestions(questionsFromJson, questionsFromLocalStorage);
         this.filteredQuestions = this.questions;
-        console.log(this.filteredQuestions)
       },
       (error) => {
         console.error('Error loading questions:', error);
@@ -140,11 +136,9 @@ export class LifeQuizComponent implements OnInit {
   categoryFilter(category: string): void {
     if (category === 'all') {
       this.filteredQuestions = this.questions;
-      console.log(this.filteredQuestions, category)
       return;
     }
     this.filteredQuestions = this.questions.filter(question => question.category === category);
-    console.log(this.filteredQuestions, category)
   }
 
   updateAnswer(): void {
@@ -156,12 +150,13 @@ export class LifeQuizComponent implements OnInit {
       this.quizService.updateAnswer(this.currentQuestion, this.userAnswer);
       // Clear userAnswer
       this.userAnswer = '';
+      this.showResults();
     }
-    console.log(this.currentQuestion)
   }
 
   clear(): void {
     this.quizService.clearLocalStorage();
+    this.showResults();
     this.loadQuestions();
   }
 }

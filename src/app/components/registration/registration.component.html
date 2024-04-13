@@ -1,0 +1,55 @@
+<div class="modal-headerx d-flex justify-content-around">
+
+    <div *ngIf="(eventType$ | async) === 'wealth'; else healthBlock">
+        <img src="assets/money2.svg" alt="Image" class="img-fluid reg-img mt-3 mx-3">
+    </div>
+
+    <ng-template #healthBlock>
+        <img src="assets/health.svg" alt="Image" class="img-fluid reg-img mt-3 mx-3">
+    </ng-template>
+
+    <h1 class="modal-title fs-5 py-5" id="staticBackdropLabel">Regristration</h1>
+
+    <button type="button" class="btn-close mt-3 mx-3" data-bs-dismiss="modal" aria-label="Close"></button>
+
+</div>
+
+
+<div class="modal-body">
+    <div class="currentEvent" *ngIf="(currentEvent$ | async) as currentEvent">
+        <h2>{{currentEvent.title}}</h2>
+        <p><strong>Description:</strong> {{ currentEvent.description }}</p>
+        <p><strong>Date:</strong> {{ currentEvent.date | date }}</p>
+        <p><strong>Time:</strong> {{ currentEvent.time }}</p>
+        <p><strong>Instructor:</strong> {{ currentEvent.instructor }}</p>
+    </div>
+
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <div class="form-group border p-3 rounded bg-secondary bg-opacity-25">
+                <label for="name" class="fw-bold">Name:</label>
+                <input type="text" placeholder="Required" id="name" formControlName="name" class="form-control">
+            </div>
+            <div class="form-group border p-3 rounded bg-secondary bg-opacity-25">
+                <label for="email" class="fw-bold">Email:</label>
+                <input type="email" placeholder="Required" id="email" formControlName="email" class="form-control">
+            </div>
+            <div class="form-group border p-3 rounded bg-secondary bg-opacity-25">
+                <label for="phone" class="fw-bold">Phone:</label>
+                <input type="text" placeholder="Required" id="phone" formControlName="phone" class="form-control">
+            </div>
+            <div class="form-group border p-3 rounded bg-secondary bg-opacity-25">
+                <label for="phone" class="fw-bold">Referrer:</label>
+                <input type="text" placeholder="Required" id="referrer" formControlName="referrer" class="form-control">
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-target="#eventDetailModal"
+        data-bs-toggle="modal">Close</button>
+
+    <button type="button" class="btn btn-primary" data-bs-target="#eventDetailModal" data-bs-toggle="modal"
+        (click)="onSubmit()" [disabled]="!registrationForm.valid">Save</button>
+</div>

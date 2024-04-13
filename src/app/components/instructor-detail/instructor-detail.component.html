@@ -1,0 +1,71 @@
+
+
+<div *ngIf="(currentInstructor$ | async) as instructor">
+    <div class="modal-headerx d-flex justify-content-around bg-secondary">
+
+        <img src="{{instructor.image}}" alt="" class="rounded-circle mb-3 mt-2">
+
+        <h1 class="modal-title fs-5 py-5" id="staticBackdropLabel">{{instructor?.firstName}} {{instructor?.lastName}}</h1>
+
+        <button type="button" class="btn-close mt-2" data-bs-dismiss="modal" aria-label="Close"></button>
+
+    </div>
+
+    <div class="modal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>{{ instructor.title }}</h2>
+                    <p><strong>Phone:</strong> {{ instructor.phone }}</p>
+                    <p><strong>Email:</strong> {{ instructor.email }}</p>
+                    <p><strong>Description:</strong> {{ instructor.bio }}</p>
+
+                    <div class="mx-auto">
+                        <a *ngIf="instructor.calendly" class="btn btn-primary btn-lg" href="{{ instructor.calendly }}" target="_blank">Book and Appointment</a>
+                        <hr>
+                        <!-- events -->
+                        <div class="container">
+                            <h2>Instructor Events</h2>
+                            <div class="table-responsive">
+                              <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th>Title</th>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                    <th>Actions</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr *ngFor="let event of instructorEvents$ | async">
+                                    <td>{{ event.title }}</td>
+                                    <td>{{ event.date | date }}</td>
+                                    <td>{{ event.time }}</td>
+                                    <td>
+                                      <button type="button" data-bs-toggle="modal"
+                                      data-bs-target="#eventDetailModal" class="btn btn-primary btn-sm" (click)="viewEventDetails(event)">View Details</button>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        <hr>
+                        <!-- social media -->
+                        <a *ngIf="instructor?.twitter" href="{{instructor?.twitter}}" target="_blank"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                        <a *ngIf="instructor?.facebook" href="{{instructor.facebook}}" target="_blank"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                        <a *ngIf="instructor?.linkedin" href="{{instructor.linkedin}}" target="_blank"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                        <a *ngIf="instructor?.instagram" href="{{instructor.instagram}}" target="_blank"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-footer" *ngIf="(currentInstructor$ | async) as instructor">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+</div>
+
+
+

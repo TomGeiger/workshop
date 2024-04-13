@@ -1,0 +1,20 @@
+
+{
+  "hosting": {
+    "public": "dist/workshop/browser",
+    "site": "geigersoft-health-wealth",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
+
+

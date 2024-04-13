@@ -1,32 +1,31 @@
 <!-- nav -->
-<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="#">Health - Wealth Workshop</a>
+        <a class="navbar-brand" href="#">Health & Wealth Workshops</a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarMenu">
-            <ul class="navbar-nav ms-auto">
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto navbar-nav-scroll">
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+                    <a class="nav-link" href="#quiz">Life Quiz</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact</a>
+                    <a class="nav-link" href="#questions">Questions</a>
                 </li>
             </ul>
         </div>
+
+
     </div>
 </nav>
 
 <!-- Introduciton -->
 <section class="p-5 bg-success text-center">
     <div class="container">
-        <h2 class="text-white">Welcome to the Health & Wealth Workshop</h2>
+        <h1 class="text-white custom-header">Health & Wealth Workshops</h1>
         <p class="lead ext-danger-emphasis text-white">We're dedicated to equipping you with the knowledge and tools to thrive in both your financial and physical well-being. Join us for an enlightening exploration of essential topics that encompass wealth building, financial literacy, and optimal health.</p>
     </div>
 </section>
@@ -48,7 +47,11 @@
                 <p class="d-none">Transfer factors are tiny messenger molecules that transmit immunity information from one entity to
                     another, such as between a mother and her infant who she breastfeeds. Transfer factors are a unique
                     and highly conserved form of immune intelligence that help us stay well.</p>
-                <a href="#" class="btn btn-primary">Learn More</a>
+                <!-- <a href="#" class="btn btn-primary">Learn More</a> -->
+
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#learnHealthModal" (click)="setEventType('Health')">
+                    Learn More
+                </button>
             </div>
         </div>
     </div>
@@ -63,7 +66,9 @@
                 <h2>Wealth</h2>
                 <p class="lead">Building Financial Literacy and Prosperity through Cash Value Life Insurance</p>
                 <p>On the wealth front, our expert speaker(s) will unveil valuable insights into the importance of financial literacy and its role in building and preserving wealth. Learn how cash value life insurance can serve as a powerful tool for not only financial security but also as an avenue for wealth accumulation and legacy building.</p>
-                <a href="#" class="btn btn-primary">Learn More</a>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#learnWealthModal" (click)="setEventType('Wealth')">
+                    Learn More
+                </button>
             </div>
             <div class="col-md">
                 <img src="assets/money2.svg" class="img-fluid" alt="">
@@ -73,24 +78,48 @@
 
 </section>
 
-<!-- summation -->
+<!-- summary -->
 <section class="bg-success text-light p-5 text-center">
     <div class="container">
         <p class="lead ext-danger-emphasis">Join us as we delve into the critical intersections of health, wealth, and financial literacy, empowering you to make informed decisions and take proactive steps towards a life of abundance and vitality.</p>
     </div>
 </section>
 
+<!-- Events -->
+<section class="p-5 bg-light text-dark">
+    <div class="container">
+        <h2 class="text-center">Upcoming Events</h2>
+        <p class="lead text-center">Secure your spot for the Health & Wealth Workshop today!</p>
+
+        <app-events></app-events>
+    </div>
+</section>
+
 <!-- Life Quiz -->
-<section class="bg-dark text-light p-5">
+<section id="quiz" class="bg-dark text-light p-5">
     <div class="container">
         <h1 class="text-center">Life Quiz</h1>
+
         <p class="lead text-centerx">Embark on a journey of self-discovery and reflection with our Life Quiz, designed to help you gain insights into your health, wealth, and overall well-being.</p>
+
         <p class="text-center d-none">Answer thought-provoking questions that will prompt you to explore your aspirations, values, and priorities, guiding you towards a path of personal growth and fulfillment.</p>
+
         <p class="">This quiz is designed to spark reflection and introspection on two vital aspects of life: health and wealth. Through a series of thought-provoking questions, you'll explore your beliefs, priorities, and aspirations regarding your physical well-being and financial security. By participating in this quiz, you'll gain insights into your current mindset, habits, and goals, paving the way for personal growth and informed decision-making on your journey to holistic success. Dive into the quiz and discover new perspectives on health, wealth, and the intersection between the two!</p>
 
         <p class="mb-5 lead">Click on each question to answer</p>
 
         <app-life-quiz></app-life-quiz>
+    </div>
+</section>
+
+<!-- Instructors -->
+<section id="instructors" class="p-5 bg-primary">
+    <div class="container">
+        <h2 class="text-center text-white">Our Instructors</h2>
+        <p class="lead text-center text-white mb-5">
+            Meet the experts who will guide you through an enlightening journey of health and wealth.
+        </p>
+        <app-instructors></app-instructors>
     </div>
 </section>
 
@@ -206,71 +235,177 @@
     </div>
 </section>
 
-<section id="instructors" class="p-5 bg-primary">
+
+<!-- footer.p-5.bg-dark.text-white -->
+<footer class="p-5 bg-primary text-white text-center position-relative">
     <div class="container">
-        <h2 class="text-center text-white">Our Instructors</h2>
-        <p class="lead text-center text-white mb-5">
-            Meet the experts who will guide you through an enlightening journey of health and wealth.
-        </p>
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-3">
-                <div class="card bg-light">
-                    <div class="card-body text-center">
-                        <img src="https://randomuser.me/api/portraits/men/13.jpg" alt="" class="rounded-circle mb-3">
-                        <p class="card-title">John Doe</p>
-                        <p class="card-text">Health Expert</p>
-                        <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
-                        <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
-                        <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
-                        <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
-                    </div>
+        <p class="lead">Copyright &copy; 2024 Geigersoft</p>
+        <a href="#" class="position-absolute bottom-0 end-0 p-5">
+            <i class="bi bi-arrow-up-circle h1 bg-dark"></i>
+        </a>
+    </div>
+</footer>
+
+
+<!-- Modals -->
+
+<!-- Health Lean More Modal -->
+<div class="modal fade text-dark" id="learnHealthModal" data-bs-backdrop="static" data-bs-keyboard="false"
+    tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <app-health-learn-more></app-health-learn-more>
+        </div>
+    </div>
+</div>
+
+<!-- Health Lean More Modal -->
+<div class="modal fade text-dark" id="learnWealthModal" data-bs-backdrop="static" data-bs-keyboard="false"
+    tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <app-wealth-learn-more></app-wealth-learn-more>
+        </div>
+    </div>
+</div>
+
+<!-- Registration Modal -->
+<div class="modal fade text-dark" id="registrationModal" data-bs-backdrop="static" data-bs-keyboard="false"
+    tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <app-registration></app-registration>
+
+        </div>
+    </div>
+</div>
+
+<!-- event detail modal-->
+<div class="modal fade text-dark" id="eventDetailModal" data-bs-backdrop="static" data-bs-keyboard="false"
+    tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <app-event-detail></app-event-detail>
+
+        </div>
+    </div>
+</div>
+
+<!-- instructor detail modal-->
+<div class="modal fade text-dark" id="instructorDetailModal" data-bs-backdrop="static" data-bs-keyboard="false"
+    tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- <app-event-detail></app-event-detail> -->
+            <app-instructor-detail></app-instructor-detail>
+
+        </div>
+    </div>
+</div>
+
+
+
+<!-- showcase old -->
+<section class="bg-success text-light p-5 text-center text-sm-start d-none">
+    <div class="container">
+        <div class="d-sm-flex justify-content-around">
+
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top img-fluid w-70 p-2" src="assets/health.svg" alt="">
+                <div class="card-body">
+                    <h2 class="card-title">Health</h2>
+                    <p class="card-text">Understanding Transfer Factors and the Human Immune System</p>
+                    <a href="#" class="btn btn-warning">Go somewhere</a>
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-3">
-                <div class="card bg-light">
-                    <div class="card-body text-center">
-                        <img src="https://randomuser.me/api/portraits/men/14.jpg" alt="" class="rounded-circle mb-3">
-                        <p class="card-title">John Doe</p>
-                        <p class="card-text">Health Expert</p>
-                        <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
-                        <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
-                        <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
-                        <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
-                    </div>
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top img-fluid w-70 p-2" src="assets/money2.svg" alt="">
+                <div class="card-body">
+                    <h2 class="card-title">Wealth</h2>
+                    <p class="card-text">Building Financial Literacy and Prosperity through Cash Value Life Insurance
+                    </p>
+                    <a href="#" class="btn btn-warning">Go somewhere</a>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="card bg-light">
-                    <div class="card-body text-center">
-                        <img src="https://randomuser.me/api/portraits/women/13.jpg" alt="" class="rounded-circle mb-3">
-                        <p class="card-title">John Doe</p>
-                        <p class="card-text">Health Expert</p>
-                        <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
-                        <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
-                        <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
-                        <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="card bg-light">
-                    <div class="card-body text-center">
-                        <img src="https://randomuser.me/api/portraits/men/23.jpg" alt="" class="rounded-circle mb-3">
-                        <p class="card-title">John Doe</p>
-                        <p class="card-text">Health Expert</p>
-                        <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
-                        <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
-                        <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
-                        <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
-                    </div>
-                </div>
-            </div>
-
 
         </div>
     </div>
 </section>
+
+<!-- showcase old -->
+<section class="bg-dark text-light p-5 text-center d-none">
+    <div class="container">
+        <div class="d-sm-flex">
+            <div class="health d-sm-flex">
+                <div>
+                    <h1>Health</h1>
+                    <p class="leadx">Understanding Transfer Factors and the Human Immune System</p>
+                </div>
+                <img class="img-fluid w-25" src="assets/health.svg" alt="">
+            </div>
+            <div class="wealth d-sm-flex">
+                <div>
+                    <h1>Wealth</h1>
+                    <p class="leadx">Building Financial Literacy and Prosperity through Cash Value Life Insurance</p>
+                </div>
+                <img class="img-fluid w-25" src="assets/money.svg" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Registration -->
+<section id="registration" class="p-5 d-none">
+    <div class="container">
+        <h2 class="text-center">Registration</h2>
+        <p class="lead text-center">Secure your spot for the Health & Wealth Workshop today!</p>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card bg-light text-dark">
+                    <div class="card-body w-70">
+                        <h3>Wealth Workshop</h3>
+                        <p>Embark on a journey to financial prosperity and literacy with our Cash Value Life Insurance workshop. Explore the unique benefits and strategies of Cash Value Life Insurance that can help you build wealth and secure your financial future. Our knowledgeable speakers will guide you through the intricacies of wealth accumulation and provide practical tips for achieving financial success.</p>
+
+                        <!-- <p>Discover the power of Cash Value Life Insurance in building financial literacy and prosperity.</p> -->
+
+                        <p>Registration Fee: $50 (Free with discount code)</p>
+                        <!-- <button class="btn btn-primary">Register Now</button> -->
+
+                        <button type="button" (click)="setEventType('Wealth')" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registrationModal">
+                            Register Now!!
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card bg-light text-dark">
+                    <div class="card-body w-70">
+                        <h3>Health Workshop</h3>
+                        <p>Unlock the secrets of the human immune system and delve into the fascinating world of Transfer Factors. Gain valuable insights into how Transfer Factors can enhance your immune response and contribute to overall health and well-being. Join us for an engaging discussion led by experts in the field to learn how to optimize your immune system for peak performance.</p>
+                        <!-- <p>Discover the power of Cash Value Life Insurance in building financial literacy and prosperity.</p> -->
+
+                        <p>Registration Fee: $50 (Free with discount code)</p>
+                        <!-- <button class="btn btn-primary">Register Now</button> -->
+
+                        <button type="button" (click)="setEventType('Health')" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registrationModal">
+                            Register Now!!
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- regristration -->
+    </div>
+</section>
+
 
 <!-- Life Quiz -->
 <section id="life-quiz" class="bg-dark text-light p-5 d-none">
@@ -402,59 +537,5 @@
         </ol>
         
 
-    </div>
-</section>
-
-
-
-
-
-<!-- showcase old -->
-<section class="bg-success text-light p-5 text-center text-sm-start d-none">
-    <div class="container">
-        <div class="d-sm-flex justify-content-around">
-
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top img-fluid w-70 p-2" src="assets/health.svg" alt="">
-                <div class="card-body">
-                    <h2 class="card-title">Health</h2>
-                    <p class="card-text">Understanding Transfer Factors and the Human Immune System</p>
-                    <a href="#" class="btn btn-warning">Go somewhere</a>
-                </div>
-            </div>
-
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top img-fluid w-70 p-2" src="assets/money2.svg" alt="">
-                <div class="card-body">
-                    <h2 class="card-title">Wealth</h2>
-                    <p class="card-text">Building Financial Literacy and Prosperity through Cash Value Life Insurance
-                    </p>
-                    <a href="#" class="btn btn-warning">Go somewhere</a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- showcase old -->
-<section class="bg-dark text-light p-5 text-center d-none">
-    <div class="container">
-        <div class="d-sm-flex">
-            <div class="health d-sm-flex">
-                <div>
-                    <h1>Health</h1>
-                    <p class="leadx">Understanding Transfer Factors and the Human Immune System</p>
-                </div>
-                <img class="img-fluid w-25" src="assets/health.svg" alt="">
-            </div>
-            <div class="wealth d-sm-flex">
-                <div>
-                    <h1>Wealth</h1>
-                    <p class="leadx">Building Financial Literacy and Prosperity through Cash Value Life Insurance</p>
-                </div>
-                <img class="img-fluid w-25" src="assets/money.svg" alt="">
-            </div>
-        </div>
     </div>
 </section>

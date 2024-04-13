@@ -1,0 +1,26 @@
+
+<div class="instructors" *ngIf="instructors$ | async as instructors">
+
+
+    <div class="row g-4"> 
+        <div class="col-md-6 col-lg-3" *ngFor="let instructor of instructors">
+            <div class="card bg-light">
+                <div class="card-body text-center">
+                    <img src="{{instructor.image}}" alt="" class="rounded-circle mb-3">
+                    <p class="card-title">{{instructor.firstName}} {{instructor.lastName}}</p>
+                    <p class="card-text">{{instructor.title}}</p>
+
+                    <button type="button" (click)="setCurrentInstructor(instructor)" class="btn btn-dark mt-3" data-bs-toggle="modal"
+                    data-bs-target="#instructorDetailModal">
+                    View Details
+                  </button>
+                  <hr>
+                    <a *ngIf="instructor?.twitter" href="{{instructor?.twitter}}" target="_blank"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                    <a *ngIf="instructor?.facebook" href="{{instructor.facebook}}" target="_blank"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                    <a *ngIf="instructor?.linkedin" href="{{instructor.linkedin}}" target="_blank"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                    <a *ngIf="instructor?.instagram" href="{{instructor.instagram}}" target="_blank"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+
+/* Custom CSS to lighten placeholder text */
+::placeholder {
+    color: #999; /* Adjust the color code to your preferred lighter shade */
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.reg-img {
+    width: 220px;
+    height: auto;
+}

@@ -1,0 +1,51 @@
+<div *ngIf="(currentEvent$ | async) as event">
+    <div class="modal-headerx d-flex justify-content-between">
+
+        <!-- <img src="assets/money2.svg" alt="Image" class="img-fluid reg-img"> -->
+
+        <div *ngIf="(eventType$ | async) === 'wealth'; else healthBlock">
+            <img src="assets/money2.svg" alt="Image" class="img-fluid reg-img img-width mt-2 mx-3">
+        </div>
+    
+        <ng-template #healthBlock>
+            <img src="assets/health.svg" alt="Image" class="img-fluid reg-img health-img-width mt-3 mx-left-3 mx-3">
+        </ng-template>
+
+        <h1 class="modal-title fs-5 py-5" id="staticBackdropLabel">Event Details</h1>
+
+        <button type="button" class="btn-close mt-3 mx-3" data-bs-dismiss="modal" aria-label="Close"></button>
+
+    </div>
+
+    <div class="modal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>{{ event.title }}</h2>
+                    <p><strong>Date:</strong> {{ event.date | date }}</p>
+                    <p><strong>Time:</strong> {{ event.time }}</p>
+                    <p class="card-text"><strong>Meeting Starts:</strong> {{ event.date.toString() | timeRemaining: event.time }}</p>
+                    <p><strong>Description:</strong> {{ event.description }}</p>
+                    <p><strong>Location:</strong> {{ event.location }}</p>
+                    <p><strong>Instructor:</strong> {{ event.instructor }}</p>
+                    <h3 class="badge bg-success" *ngIf="(isRegistered$ | async)">
+                        Registered <i class="bi bi-check"></i>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-footer" *ngIf="(currentEvent$ | async) as event">
+
+    <div *ngIf="(isRegistered$ | async)">
+        <a [href]="event.zoomLink" class="btn btn-primary" target="_blank">Join Event</a>
+    </div>
+
+    <button *ngIf="!(isRegistered$ | async)" (click)="setEventType(event.category)" class="btn btn-primary" data-bs-target="#registrationModal" data-bs-toggle="modal"
+        (click)="registerForEvent()">Register</button>
+
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+</div>
+
