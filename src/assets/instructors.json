@@ -3,17 +3,16 @@
         "id": 1,
         "firstName": "Thomas",
         "lastName": "Geiger",
-        "title": "Software Engineer",
+        "title": "Software Engineer & Financial Strategist",
         "image": "https://res.cloudinary.com/dmwdy7ahn/image/upload/c_limit,h_110,w_100/v1689032856/AgentLink/nhjkbbir4etopcipjao9.jpg",
-        "phone": "123-456-7890",
+        "phone": "919-271-0609",
         "email": "tom.geiger@me.com",
         "calendly": "https://calendly.com/tom-geiger/30min",
         "bio": "Meet Tom Geiger, a seasoned software engineer and dedicated partner to Patricia in their shared mission of 'No Family Left Behind' in the realm of financial education. With over 30 years of experience in the technology industry, Tom brings a wealth of knowledge and expertise to the table. His passion for technology is matched only by his fervent commitment to financial literacy. Growing up in middle-class America, Tom experienced firsthand the lack of financial education in traditional schooling. It wasn't until later in life, upon realizing that the conventional wisdom of relying solely on a 401(k) for retirement wasn't sufficient, that he embarked on a quest for financial knowledge. Driven by a desire to understand how money truly works and how individuals can achieve financial security, Tom is dedicated to sharing his insights and experiences with others. Through his partnership with Patricia and their joint efforts to educate and empower families, Tom aims to demystify the complexities of personal finance and guide others toward a path of financial freedom and abundance.",
-        "website": "https://tomgeiger.com",
         "facebook": "https://facebook.com/tomgeiger2",
         "twitter": "https://twitter.com/tomgeiger",
-        "instagram": "https://instagram.com/tomgeiger",
-        "linkedin": "https://linkedin.com/in/tomgeiger"
+        "instagram": "https://www.instagram.com/geigercoin/",
+        "linkedin": "https://www.linkedin.com/in/tomgeigernc/"
     },
     {
         "id": 2,
@@ -21,13 +20,14 @@
         "lastName": "Geiger",
         "title": "Financial Advisor",
         "image": "https://res.cloudinary.com/dmwdy7ahn/image/upload/c_limit,h_110,w_100/v1689032971/AgentLink/joudqrunoihkzc5vlu30.jpg",
-        "phone": "123-456-7890",
-        "email": "tom.geiger@me.com",
+        "phone": "919-522-3462",
+        "email": "ptaurusp15@gmail.com",
         "calendly": "https://calendly.com/patricia-geiger/iul-zoom-meeting",
         "bio": "Meet Patricia Geiger, a licensed financial professional and passionate advocate for financial literacy.\n\nAs an entrepreneur, wife, mother of four, and grandmother to three, Patricia brings a wealth of life experience to her role as an educator.\n\nWith a deep-rooted belief in the power of financial education, Patricia is on a mission to raise the level of financial literacy in every class she teaches. She views financial literacy as a tool for empowerment and believes that everyone deserves the opportunity to achieve financial security.\n\nFor the fortunate few, Patricia offers specialized training in the world of financial literacy, guiding individuals and families on a path to prosperity. Her mantra, 'Leave No Family Behind,' underscores her commitment to helping clients protect their wealth for generations to come.\n\nJoin Patricia Geiger on a journey toward financial freedom and empowerment, where every lesson learned is a step toward building a brighter financial future for yourself and your loved ones.",
-        "twitter": "https://twitter.com/tomgeiger",
-        "instagram": "https://instagram.com/tomgeiger",
-        "linkedin": "https://linkedin.com/in/tomgeiger"
+        "twitter": "https://geigersoft.web.app/site/patricia-geiger",
+        "instagram": "https://www.instagram.com/woza_pat/",
+        "facebook": "https://www.facebook.com/patricia.peterson.3954",
+        "linkedin": "https://www.linkedin.com/in/patricia-geiger-82383727b/"
     },
     {
         "id": 3,
@@ -35,14 +35,22 @@
         "lastName": "Schambach",
         "title": "Health Champion",
         "image": "https://res.cloudinary.com/dmwdy7ahn/image/upload/c_limit,h_110,w_120/v1712894624/Gary_hlt310.jpg",
-        "phone": "123-456-7890",
-        "email": "tom.geiger@me.com",
+        "phone": "919-658-5092",
+        "email": "garyschambach@gmail.com",
         "bio": "Meet Gary Schambach, a licensed massage therapist and passionate advocate for holistic wellness.\n\nWith a background in forestry and a love for the environment, Gary brings a unique perspective to his practice.\n\nAs a retired forester turned wellness advocate, Gary is not only skilled in the art of massage therapy but also a dedicated instructor for our Transfer Molecule classes. His expertise in natural remedies and holistic healing has made him a sought-after resource in the field.\n\nIn his practice, Gary creates a nurturing environment where clients can unwind and embark on their wellness journey. With personalized care and attention to detail, he tailors each session to address specific needs, ensuring a transformative experience.\n\nJoin Gary Schambach on a journey of self-discovery and healing, where the power of touch meets the beauty of nature, and every session is a step toward greater vitality and balance.",
         "website": "https://tomgeiger.com",
-        "facebook": "https://facebook.com/tomgeiger",
-        "twitter": "https://twitter.com/tomgeiger"
+        "facebook": "https://www.facebook.com/gary.schambach"
+    },
+    {
+        "id": 4,
+        "firstName": "Tiffany",
+        "lastName": "Carnal",
+        "title": "Transfer Factor Expert",
+        "image": "https://res.cloudinary.com/dmwdy7ahn/image/upload/c_limit,h_110,w_120/v1712894624/Gary_hlt310.jpg",
+        "phone": "(502) 379-0387",
+        "email": "Tiffany.Carnal@yahoo.com",
+        "bio": "Tiffany Carnal is a passionate teacher and dedicated advocate for holistic wellness, specializing in the transformative power of Transfer Molecules. With a background in education and a deep passion for natural remedies, Tiffany brings a wealth of knowledge and expertise to her role as an educator. As a certified expert in Transfer Molecules, Tiffany shares her insights and expertise with others, empowering them to harness the healing potential of these transformative compounds. In her teaching, Tiffany creates dynamic and engaging learning experiences that inspire and empower her students to take charge of their health and well-being. Through workshops, seminars, and educational resources, she provides individuals with the tools and knowledge they need to optimize their vitality and thrive. Join Tiffany Carnal on a journey of discovery and empowerment, where the wisdom of nature meets the science of wellness. With her guidance, every lesson becomes an opportunity to unlock the secrets of holistic health and embrace a life of vitality and balance."
     }
-
 
 
 

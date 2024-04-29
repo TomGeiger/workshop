@@ -25,13 +25,19 @@
 <!-- Introduciton -->
 <section class="p-5 bg-success text-center">
     <div class="container">
-        <h1 class="text-white custom-header">Health & Wealth Workshops</h1>
-        <p class="lead ext-danger-emphasis text-white">We're dedicated to equipping you with the knowledge and tools to thrive in both your financial and physical well-being. Join us for an enlightening exploration of essential topics that encompass wealth building, financial literacy, and optimal health.</p>
+        <!-- <h1 class="text-white custom-header">Health & Wealth Workshops</h1> -->
+        <div class="d-flex gap-2 text-white justify-content-center titles">
+            <div class="h1 title">Health</div>
+            <div class="h1 title">&</div>
+            <div class="h1 title">Wealth</div>    
+            <div class="h1 title">Workshops</div>    
+        </div>
+        <p #introText class="lead ext-danger-emphasis text-white mb-3 intro-text">We're dedicated to equipping you with the knowledge and tools to thrive in both your financial and physical well-being. Join us for an enlightening exploration of essential topics that encompass wealth building, financial literacy, and optimal health.</p>
     </div>
 </section>
 
 <!-- Health -->
-<section class="p-5">
+<section class="p-5 bg-dark text-light">
     <div class="container">
         <div class="row align-items-center justify-content-between">
 
@@ -40,7 +46,7 @@
             </div>
 
             <div class="col-md">
-                <h2>Health</h2>
+                <h1 class="health-wealth">Health</h1>
                 <p class="lead">Understanding Transfer Factors and the Human Immune System</p>
                 <p>In the realm of health, our esteemed speaker(s) will guide you through a fascinating journey into the intricacies of the human immune system and the revolutionary concept of Transfer Factors. Discover how Transfer Factors play a pivotal role in enhancing immune response and safeguarding against a multitude of health challenges.</p>
 
@@ -59,13 +65,14 @@
 </section>
 
 <!-- Wealth -->
-<section class="p-5 bg-dark text-light">
+<section class="p-5">
     <div class="container">
         <div class="row align-items-center justify-content-between">
             <div class="col-md">
-                <h2>Wealth</h2>
-                <p class="lead">Building Financial Literacy and Prosperity through Cash Value Life Insurance</p>
-                <p>On the wealth front, our expert speaker(s) will unveil valuable insights into the importance of financial literacy and its role in building and preserving wealth. Learn how cash value life insurance can serve as a powerful tool for not only financial security but also as an avenue for wealth accumulation and legacy building.</p>
+                <h1 class="health-wealth">Wealth</h1>
+                <p class="lead">Building Financial Literacy and Prosperity</p>
+                <p>In the realm of wealth, our expert speaker(s) will unveil valuable insights into the importance of financial literacy and its role in building and preserving wealth. Financial literacy is the cornerstone of financial well-being, empowering individuals to make informed decisions about money management, investments, and financial planning.</p>
+                <p>Join us as we explore the fundamentals of financial literacy and discover practical strategies for achieving financial security and prosperity. Whether you're just starting your financial journey or seeking to enhance your existing knowledge, our speakers will provide you with the tools and knowledge you need to navigate the complexities of personal finance with confidence.</p>
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#learnWealthModal" (click)="setEventType('Wealth')">
                     Learn More
                 </button>
@@ -77,6 +84,7 @@
     </div>
 
 </section>
+
 
 <!-- summary -->
 <section class="bg-success text-light p-5 text-center">
