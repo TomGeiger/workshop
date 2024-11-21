@@ -1,9 +1,40 @@
+
 [
+    {
+        "question_number": 1,
+        "category": "both",
+        "question": "If you were to die a natural death, how old would you be?",
+        "subquestions": ["What aspirations do you have for your lifespan, and what steps are you taking to achieve them?"]
+    },
     {
         "question_number": 2,
         "category": "both",
         "question": "In your world, which is more important on a scale of 1 to 10: Extreme health or extreme wealth?",
         "subquestions": ["Reflect on the significance of both health and wealth in your life and how they contribute to your overall well-being."]
+    },
+    {
+        "question_number": 3,
+        "category": "both",
+        "question": "If you could take action today to prevent catastrophic consequences in the future, would you do it?",
+        "subquestions": ["Consider the importance of proactive measures in safeguarding your future and the implications of delaying action."]
+    },
+    {
+        "question_number": 4,
+        "category": "both",
+        "question": "Who are the two people responsible for where you are today? (Mentors)",
+        "subquestions": ["Reflect on the individuals who have influenced and guided you on your journey, shaping your present circumstances."]
+    },
+    {
+        "question_number": 5,
+        "category": "health",
+        "question": "When you wake up in the morning, do you feel energized and ready to take on the day, or do you feel like snoozing longer?",
+        "subquestions": ["Explore your morning routine and assess how it impacts your energy levels and productivity throughout the day."]
+    },
+    {
+        "question_number": 6,
+        "category": "both",
+        "question": "Who is the primary influencer in your current world?",
+        "subquestions": ["Identify the individual or source that significantly impacts your decisions, actions, and mindset."]
     },
     {
         "question_number": 7,
@@ -12,10 +43,22 @@
         "subquestions": ["Delve into the areas of your health and finances that require immediate attention and outline actionable steps to address them."]
     },
     {
-        "question_number": 20,
+        "question_number": 8,
         "category": "both",
-        "question": "If you could give one piece of advice to your future self about prioritizing health and wealth, what would it be?",
-        "subquestions": ["Imagine advising your future self and share a valuable insight or lesson learned about the importance of prioritizing health and wealth in life."]
+        "question": "If you could make one change today to improve your overall well-being, what would it be?",
+        "subquestions": ["Reflect on areas of improvement in your life and identify a concrete action you can take to initiate positive change."]
+    },
+    {
+        "question_number": 9,
+        "category": "both",
+        "question": "How do you define success in your life?",
+        "subquestions": ["Consider what success means to you personally and how it aligns with your health, wealth, and overall fulfillment."]
+    },
+    {
+        "question_number": 10,
+        "category": "both",
+        "question": "If you had unlimited resources, what would you prioritize investing in: your health or your wealth?",
+        "subquestions": ["Contemplate your investment priorities and the long-term impact they would have on your life and those around you."]
     },
     {
         "question_number": 11,
@@ -24,10 +67,76 @@
         "subquestions": ["Explore your definition of financial freedom and outline the steps you intend to take to attain it."]
     },
     {
+        "question_number": 12,
+        "category": "health",
+        "question": "How do you prioritize self-care in your daily life, and what practices do you implement to maintain your well-being?",
+        "subquestions": ["Reflect on the importance of self-care and identify the rituals or habits that contribute to your physical, mental, and emotional health."]
+    },
+    {
+        "question_number": 13,
+        "category": "both",
+        "question": "What role does gratitude play in your life, and how do you express appreciation for the blessings you have?",
+        "subquestions": ["Consider the impact of gratitude on your overall happiness and fulfillment, and discuss ways you incorporate gratitude into your daily routine."]
+    },
+    {
+        "question_number": 14,
+        "category": "health",
+        "question": "If you could choose one health goal to achieve in the next year, what would it be, and what steps would you take to reach it?",
+        "subquestions": ["Set a specific health goal and outline a plan of action to achieve it, focusing on measurable objectives and realistic timelines."]
+    },
+    {
+        "question_number": 15,
+        "category": "wealth",
+        "question": "How do you approach financial decision-making, and what factors influence your financial choices?",
+        "subquestions": ["Evaluate your financial decision-making process and identify the values, priorities, and external factors that shape your financial behavior."]
+    },
+    {
+        "question_number": 16,
+        "category": "both",
+        "question": "What motivates you to pursue your health and wealth goals, and how do you stay committed to achieving them despite challenges?",
+        "subquestions": ["Explore your sources of motivation and discuss strategies for maintaining resilience and determination in the face of obstacles."]
+    },
+    {
+        "question_number": 17,
+        "category": "both",
+        "question": "What role does education play in your journey to improve your health and wealth, and how do you continue to learn and grow in these areas?",
+        "subquestions": ["Reflect on the importance of ongoing education and personal development in enhancing your health and financial literacy."]
+    },
+    {
+        "question_number": 18,
+        "category": "health",
+        "question": "How do you define success in terms of your health, and what milestones do you hope to achieve on your wellness journey?",
+        "subquestions": ["Define what success looks like for you in terms of health and outline specific milestones you aim to reach in pursuit of optimal well-being."]
+    },
+    {
+        "question_number": 19,
+        "category": "wealth",
+        "question": "What financial habits do you practice regularly, and how do they contribute to your long-term financial stability and growth?",
+        "subquestions": ["Discuss your financial habits, such as budgeting, saving, and investing, and assess their effectiveness in helping you achieve your financial goals."]
+    },
+    {
+        "question_number": 20,
+        "category": "both",
+        "question": "If you could give one piece of advice to your future self about prioritizing health and wealth, what would it be?",
+        "subquestions": ["Imagine advising your future self and share a valuable insight or lesson learned about the importance of prioritizing health and wealth in life."]
+    },
+    {
         "question_number": 21,
         "category": "wealth",
         "question": "What are your long-term financial goals, and how do you plan to achieve them?",
         "subquestions": ["Define your aspirations for financial success and outline the steps required to realize your objectives."]
+    },
+    {
+        "question_number": 23,
+        "category": "wealth",
+        "question": "What are your long-term financial aspirations, and how do they align with your values and lifestyle?",
+        "subquestions": ["Delve into your vision for financial success and how it fits into your broader life goals and values."]
+    },
+    {
+        "question_number": 24,
+        "category": "wealth",
+        "question": "How do you approach financial risk-taking, and what strategies do you employ to mitigate potential losses?",
+        "subquestions": ["Explore your attitude towards risk in investments and the measures you take to safeguard your financial security."]
     },
     {
         "question_number": 25,
@@ -36,10 +145,28 @@
         "subquestions": ["Reflect on your resilience and ability to navigate economic fluctuations to ensure long-term financial well-being."]
     },
     {
-        "question_number": 12,
-        "category": "health",
-        "question": "How do you prioritize self-care in your daily life, and what practices do you implement to maintain your well-being?",
-        "subquestions": ["Reflect on the importance of self-care and identify the rituals or habits that contribute to your physical, mental, and emotional health."]
+        "question_number": 26,
+        "category": "wealth",
+        "question": "What role does philanthropy play in your financial philosophy, and how do you incorporate charitable giving into your financial plan?",
+        "subquestions": ["Consider the importance of giving back to society and how it integrates into your wealth management strategy."]
+    },
+    {
+        "question_number": 27,
+        "category": "wealth",
+        "question": "How do you define financial independence, and what milestones do you aim to achieve on your journey towards it?",
+        "subquestions": ["Define what financial independence means to you and outline tangible goals that signify progress towards financial autonomy."]
+    },
+    {
+        "question_number": 28,
+        "category": "wealth",
+        "question": "What financial habits do you prioritize to maintain sustainable wealth accumulation, and how do they contribute to your financial success?",
+        "subquestions": ["Discuss the daily practices and routines you uphold to cultivate healthy financial habits and build long-term wealth."]
+    },
+    {
+        "question_number": 29,
+        "category": "wealth",
+        "question": "If you could change one aspect of your current financial situation, what would it be, and what steps would you take to enact that change?",
+        "subquestions": ["Identify areas of improvement in your financial circumstances and outline actionable strategies to address them effectively."]
     },
     {
         "question_number": 31,
@@ -52,6 +179,53 @@
         "category": "health",
         "question": "What dietary habits do you prioritize to support your overall well-being, and how do they contribute to your health goals?",
         "subquestions": ["Explore your approach to nutrition and the dietary choices you make to promote optimal health and vitality."]
+    },
+    {
+        "question_number": 33,
+        "category": "health",
+        "question": "In times of stress, how do you prioritize mental health and emotional well-being?",
+        "subquestions": ["Reflect on the strategies you use to manage stress and cultivate emotional resilience for mental well-being."]
+    },
+    {
+        "question_number": 34,
+        "category": "health",
+        "question": "What role does sleep play in your overall health, and how do you ensure you get adequate rest and rejuvenation?",
+        "subquestions": ["Discuss the importance of quality sleep and the practices you implement to maintain healthy sleep patterns."]
+    },
+    {
+        "question_number": 35,
+        "category": "health",
+        "question": "How do you approach preventive healthcare, and what measures do you take to prioritize disease prevention and early detection?",
+        "subquestions": ["Explore your proactive approach to healthcare and the preventive measures you adopt to safeguard your well-being."]
+    },
+    {
+        "question_number": 36,
+        "category": "health",
+        "question": "What strategies do you employ to maintain a work-life balance that promotes both professional success and personal well-being?",
+        "subquestions": ["Reflect on your efforts to balance career demands with personal life commitments for overall life satisfaction."]
+    },
+    {
+        "question_number": 37,
+        "category": "health",
+        "question": "How do you define holistic health, and what practices do you incorporate to nurture your physical, mental, and emotional well-being?",
+        "subquestions": ["Define your concept of holistic health and discuss the holistic approaches you adopt to care for your overall well-being."]
+    },
+    {
+        "question_number": 38,
+        "category": "health",
+        "question": "If you could change one aspect of your current health habits, what would it be, and what steps would you take to enact that change?",
+        "subquestions": ["Identify areas for improvement in your health habits and outline actionable strategies to cultivate healthier behaviors."]
+    },
+    {
+        "question_number": 39,
+        "category": "health",
+        "question": "What role does social support play in your health journey, and how do your relationships contribute to your overall well-being?",
+        "subquestions": ["Consider the impact of social connections on health and the supportive relationships that enhance your quality of life."]
+    },
+    {
+        "question_number": 40,
+        "category": "health",
+        "question": "How do you prioritize self-care practices that nurture your physical, mental, and emotional health?",
+        "subquestions": ["Reflect on the importance of self-care rituals and the strategies you employ to prioritize your holistic well-being."]
     }
 ]
-
