@@ -35,7 +35,7 @@ export interface MyEvent extends WorkshopEvent {
 })
 export class EventService {
 
-  private eventUrl = 'assets/events.json';
+  private eventUrl = '/assets/events.json';
 
   initialValue: WorkshopEvent = {
     id: 0,
